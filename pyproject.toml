@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools~=67.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "track-pypi-dependency-version"
+version = "1.0"
+description = "A script for use with GitHub Actions that updates the upper bound in requirements.txt when a package is released on PyPI"
+readme = "README.md"
+authors = [{name = "Catherine", email = "whitequark@whitequark.org"}]
+license = {file = "LICENSE.txt"}
+
+dependencies = [
+  "packaging>=20"
+]
+
+[project.urls]
+"Source Code" = "https://github.com/whitequark/track-pypi-dependency-version"
+"Bug Tracker" = "https://github.com/whitequark/track-pypi-dependency-version/issues"
+
+[project.scripts]
+track-pypi-dependency-version = "track_pypi_dependency_version:main"
